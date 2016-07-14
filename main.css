@@ -2,8 +2,6 @@ body {
   background: #f9f9f9;
   color: rgba(0,0,0,.8);
   font-family: Georgia,Cambria,"Times New Roman",Times,serif;
-  font-size: 21px;
-
   font-weight: 400;
   font-style: normal;
   font-size: 1.3125em;
@@ -16,17 +14,39 @@ h1,h2,h3 {
   text-align: center;
 }
 
-h2 a {
+h2 {
+  font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+  font-size: 1.75em;
+
+}
+
+h2 a, h3 a {
   color: inherit;
 }
 
-h2 a:hover {
+h2 a:hover, h3 a:hover {
   text-decoration: none;
 }
 
-h2 {
+h2, h3 {
   border-top: 1px solid #ccc;
+  padding-top: 2em;
+
+}
+
+h2:first-of-type {
+  border-top: none;
   padding-top: 1em;
+}
+
+h1 {
+
+  font-size: 2em;
+  padding: 1em;
+}
+
+h3 {
+  text-align: left;
 }
 
 p {
@@ -36,7 +56,8 @@ p {
 blockquote {
   font-size: 1.15em;
   color: rgba(0,0,0,.7);
-  background: #eee;
+  background: #f0f0f0;
+
   margin: 0;
   padding: 1em 2em;
 }
@@ -53,14 +74,20 @@ header {
 }
 
 ul {
-  font-size: .76em;
+  font-size: .74em;
   list-style: none;
-  padding: 1em 0 0 2em;
+  padding: 1em 0 1em 2em;
   font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
+  color: rgba(0,0,0,.75);
 }
 
 ul a {
-  color: rgba(0,0,0,.75);
+  color: inherit;
+}
+
+li > ul {
+  font-size: 1em;
+  color: rgba(0,0,0,.5);
 }
 
 a {
@@ -82,4 +109,15 @@ a:hover {
   width: 700px;
   margin: 0 auto;
   padding-left: 350px;
+}
+
+.screen-reader-only {
+	border:0;
+	clip:rect(0000);
+	height:1px;
+	margin:-1px;
+	overflow:hidden;
+	padding:0;
+	position:absolute;
+	width:1px;
 }
