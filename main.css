@@ -28,12 +28,6 @@ h2 a:hover, h3 a:hover {
   text-decoration: none;
 }
 
-h2, h3 {
-  border-top: 1px solid #ccc;
-  padding-top: 2em;
-
-}
-
 h2:first-of-type {
   border-top: none;
   padding-top: 1em;
@@ -46,7 +40,10 @@ h1 {
 }
 
 h3 {
+  border-top: 1px solid #ccc;
   text-align: left;
+  padding-top: 4em;
+  margin-top: 1em;
 }
 
 p {
@@ -62,7 +59,7 @@ blockquote {
   padding: 1em 2em;
 }
 
-header {
+nav {
 
 	background: #eee;
 	width: 360px;
@@ -79,6 +76,19 @@ ul {
   padding: 1em 0 1em 2em;
   font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
   color: rgba(0,0,0,.75);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+section {
+  margin-top: 2em;
+  border-top: 2em solid #eee;
+}
+
+article {
+  padding-bottom: 4em;
 }
 
 ul a {
@@ -101,6 +111,8 @@ a:hover {
 }
 
 .byline {
+  margin: 0;
+  padding: 0;
   text-align: center;
   font-style: italic;
 }
