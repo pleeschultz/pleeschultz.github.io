@@ -1,0 +1,49 @@
+body {
+  background: #eee;
+  color: rgba(0,0,0,.8);
+  font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+  font-size: 21px;
+
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3125em;
+  line-height: 1.58;
+  letter-spacing: -.003em;
+}
+
+h1,h2,h3 {
+  font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
+  text-align: center;
+}
+
+p {
+  font-size: 1em;
+}
+
+blockquote {
+  font-size: 1.15em;
+  color: rgba(0,0,0,.7);
+}
+
+ul {
+  font-size: .76em;
+}
+
+a {
+  color: #2770e4;
+  text-decoration: none;
+}
+
+a:hover {
+  /*color: rgba(0,0,0,1);*/
+  text-decoration: underline;
+}
+
+.byline {
+  text-align: center;
+}
+
+.single-column {
+  width: 700px;
+  margin: 0 auto;
+}
