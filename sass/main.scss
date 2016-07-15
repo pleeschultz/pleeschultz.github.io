@@ -32,7 +32,7 @@ body {
 nav {
   display: block;
   position: fixed;
-  transform: translateZ(0); 
+  transform: translateZ(0);
   width: 100%;
   background: $colorGray;
   min-height: 3em;
@@ -119,6 +119,25 @@ article {
 section {
   margin-bottom: 2em;
   border-top: 2em solid #eee;
+
+
+
+}
+
+figure {
+  max-width: 100%;
+  padding: 0 1.5em;
+
+  img {
+    width: 100%;
+  }
+
+  figcaption {
+    font-size: .85em;
+    opacity: .75;
+    font-style: italic;
+  }
+
 }
 
 p {

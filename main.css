@@ -124,6 +124,16 @@ section {
   margin-bottom: 2em;
   border-top: 2em solid #eee; }
 
+figure {
+  max-width: 100%;
+  padding: 0 1.5em; }
+  figure img {
+    width: 100%; }
+  figure figcaption {
+    font-size: .85em;
+    opacity: .75;
+    font-style: italic; }
+
 p {
   padding: 1em 1.5em; }
   p:first-of-type {
