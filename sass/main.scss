@@ -1,7 +1,11 @@
 @import "./reset.scss";
 
+
+
 $colorGray: #f9f9f9;
 $colorCopy: rgba(0,0,0,.8);
+$colorLink: #2770e4;
+
 
 $serifFamily: Georgia,Cambria,"Times New Roman",Times,serif;
 $sansSerifFamily: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
@@ -32,8 +36,14 @@ nav {
   background: $colorGray;
   min-height: 3em;
   height: auto;
+  max-height: 100%;
   top: 0;
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,.5);
+
+  overflow-y: scroll;
+
+
+
 }
 
 .nav-toggle {
@@ -58,17 +68,48 @@ nav {
 
 .nav-toc {
   display: none;
+  // padding-bottom: 2em;
+  font-size: 1em;
+  list-style: none;
+  padding: 1em 0 2em 2em;
+  font-family: $sansSerifFamily;
+  color: rgba(0,0,0,.75);
+
+  a {
+    color: inherit;
+  }
+
+  .nav-toc--active {
+    text-decoration: underline;
+    color: $colorLink;
+    font-weight: bold;
+  }
+
+  li > ul {
+    font-size: 1em;
+    color: rgba(0,0,0,.5);
+    padding: 1em 0 2em 0em;
+
+    .nav-toc--active-h3 {
+      color: $colorLink;
+    }
+  }
 }
 
 .nav-toc--open {
   display: block;
   width: 100%;
-  height: 100%;
 }
 
 article {
   width: 100%;
   padding: 0 0 0 0em;
+
+}
+
+.article-inner {
+  max-width: 768px;
+  margin: 0 auto;
 }
 
 section {
@@ -96,7 +137,7 @@ blockquote {
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 768px) {
 
   body {
     font-size: 1.3125em
@@ -116,14 +157,21 @@ blockquote {
   }
 
   .nav-toc {
+    padding-top: 2em;
     display: block;
     width: 100%;
-    height: 100%;
+    font-size: .76em;
+
+    li > ul {
+      font-size: 1em;
+      padding: 1em 0 2em 2em;
+    }
   }
 
   article {
-    max-width: 700px;
+    max-width: 100%;
     margin: 0 auto;
+    position: relative;
     padding-left: 360px;
     padding-bottom: 4em;
   }
@@ -132,27 +180,43 @@ blockquote {
 :target:before {
   content:"";
   display:block;
-  height:5em; /* fixed header height*/
-  margin:-5em 0 0; /* negative fixed header height */
+  height:4em; /* fixed header height*/
+  margin:-4em 0 0; /* negative fixed header height */
 }
 
 h2 {
   border-top: none;
-  padding: 1.5em 0 .5em;
+  padding: 3.25em 0 .5em;
   margin-top: 0;
   font-family: $serifFamily;
   text-align: center;
-  font-size: 1.75em;
+  font-size: 2.5em;
+  width: auto;
   &:before {
-    content: '\2014';
+    // content: '\2014';
     padding-right: .5em;
     color: #ddd;
   }
   &:after {
-    content: '\2014';
+    // content: '\2014';
     padding-left: .5em;
     color: #ddd;
   }
+}
+
+.emphasis {
+  text-decoration: underline;
+  // font-style: italic;
+}
+
+.signature {
+  // text-decoration: underline;
+  font-style: italic;
+}
+
+.separation {
+  color: $colorCopy;
+  text-align: center;
 }
 
 
@@ -160,10 +224,12 @@ h3 {
   font-family: $sansSerifFamily;
   border-top: 1px solid #ccc;
   text-align: left;
-  padding-top: 4em;
+  padding: 4em 0 1em .95em;
+  // padding-top: 4em;
   margin-top: 1em;
-  padding-left: 1.5em;
+  // padding-left: .95em;/
   font-weight: bold;
+  font-size: 1.5em;
 }
 
 h2, h3 {
@@ -177,25 +243,10 @@ h2, h3 {
 
 
 
-ul {
-  font-size: .74em;
-  list-style: none;
-  padding: 1em 0 1em 2em;
-  font-family: $sansSerifFamily;
-  color: rgba(0,0,0,.75);
-}
 
-ul a {
-  color: inherit;
-}
-
-li > ul {
-  font-size: 1em;
-  color: rgba(0,0,0,.5);
-}
 
 a {
-  color: #2770e4;
+  color: $colorLink;
   text-decoration: none;
 }
 
@@ -219,4 +270,11 @@ a:hover {
 	padding:0;
 	position:absolute;
 	width:1px;
+}
+
+@media only print {
+    nav { display: none; }
+    section { border-top: none; margin-bottom: 0em; }
+    h2,h3 { border: none; padding-top: 2em; }
+    a { color: inherit; }
 }
