@@ -28,7 +28,7 @@ ready(function(){
     var h2sAboveTop = [];
     var h3sAboveTop = [];
 
-    h2s.forEach(function(element, index, array){
+    [].forEach.call(h2s, function(element, index, array){
       if(element.offsetTop < getScrollPosition() + (document.body.clientHeight/3)){
         h2sAboveTop.push(element);
       }
@@ -37,7 +37,7 @@ ready(function(){
     var activeH2 = h2sAboveTop[h2sAboveTop.length-1];
     var activeH2Name = activeH2 ? activeH2.querySelector('a').getAttribute('name') : undefined;
 
-    h3s.forEach(function(element, index, array){
+    [].forEach.call(h3s, function(element, index, array){
       if(element.offsetTop < getScrollPosition() + (document.body.clientHeight/3)){
         if(element.offsetTop > activeH2.offsetTop){
           h3sAboveTop.push(element);
@@ -48,7 +48,7 @@ ready(function(){
     var activeH3 = h3sAboveTop[h3sAboveTop.length-1];
     var activeH3Name = activeH3 ? activeH3.querySelector('a').getAttribute('name') : undefined;
 
-    navLinks.forEach(function(element, index, array){
+    [].forEach.call(navLinks, function(element, index, array){
 
       if(element.dataHref === activeH2Name){
         element.classList.add('nav-toc--active');
@@ -60,7 +60,7 @@ ready(function(){
       }
     });
 
-    console.log(activeH2.textContent, activeH3 ? activeH3.textContent : '');
+    // console.log(activeH2.textContent, activeH3 ? activeH3.textContent : '');
   }
 
   var navToggle = document.querySelectorAll('.js-nav-toggle')[0];

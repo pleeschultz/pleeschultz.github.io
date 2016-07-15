@@ -61,6 +61,7 @@ body {
 nav {
   display: block;
   position: fixed;
+  transform: translateZ(0);
   width: 100%;
   background: #f9f9f9;
   min-height: 3em;

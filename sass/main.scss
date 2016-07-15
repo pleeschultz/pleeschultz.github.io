@@ -32,6 +32,7 @@ body {
 nav {
   display: block;
   position: fixed;
+  transform: translateZ(0); 
   width: 100%;
   background: $colorGray;
   min-height: 3em;
