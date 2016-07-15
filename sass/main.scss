@@ -51,11 +51,14 @@ nav {
   display: block;
   width: 100%;
 
+  cursor: pointer;
+
   div {
 
     width: 20px;
     height: 2px;
     background: $colorLink;
+    cursor: pointer;
     margin: 4px auto;
     &:first-child {
       margin-top: 1em;

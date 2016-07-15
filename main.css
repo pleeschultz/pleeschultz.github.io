@@ -73,11 +73,13 @@ nav {
 
 .nav-toggle {
   display: block;
-  width: 100%; }
+  width: 100%;
+  cursor: pointer; }
   .nav-toggle div {
     width: 20px;
     height: 2px;
     background: #2770e4;
+    cursor: pointer;
     margin: 4px auto; }
     .nav-toggle div:first-child {
       margin-top: 1em; }
