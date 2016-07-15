@@ -91,6 +91,9 @@ blockquote {
   color: rgba(0,0,0,.7);
   background: #f0f0f0;
   padding: 2em 2em;
+  p {
+    padding: 1em 0;
+  }
 }
 
 @media (min-width: 700px) {
@@ -106,6 +109,16 @@ blockquote {
     top: 0;
     left: 0;
     z-index: 100;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-toc {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
 
   article {
@@ -124,17 +137,24 @@ blockquote {
 }
 
 h2 {
+  border-top: none;
+  padding: 1.5em 0 .5em;
+  margin-top: 0;
   font-family: $serifFamily;
   text-align: center;
   font-size: 1.75em;
-
+  &:before {
+    content: '\2014';
+    padding-right: .5em;
+    color: #ddd;
+  }
+  &:after {
+    content: '\2014';
+    padding-left: .5em;
+    color: #ddd;
+  }
 }
 
-h2:first-of-type {
-  border-top: none;
-  padding-top: 1em;
-  margin-top: 0;
-}
 
 h3 {
   font-family: $sansSerifFamily;
