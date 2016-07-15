@@ -78,7 +78,7 @@ nav {
   .nav-toggle div {
     width: 20px;
     height: 2px;
-    background: red;
+    background: rgba(0, 0, 0, 0.8);
     cursor: pointer;
     margin: 4px auto; }
     .nav-toggle div:first-child {
@@ -200,7 +200,7 @@ h3 {
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
   border-top: 1px solid #ccc;
   text-align: left;
-  padding: 4em 0 1em .95em;
+  padding: 4em .95em 1em .95em;
   margin-top: 1em;
   font-weight: bold;
   font-size: 1.5em; }

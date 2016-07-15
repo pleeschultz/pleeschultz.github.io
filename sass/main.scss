@@ -57,7 +57,7 @@ nav {
 
     width: 20px;
     height: 2px;
-    background: red;
+    background: $colorCopy;
     cursor: pointer;
     margin: 4px auto;
     &:first-child {
@@ -227,7 +227,7 @@ h3 {
   font-family: $sansSerifFamily;
   border-top: 1px solid #ccc;
   text-align: left;
-  padding: 4em 0 1em .95em;
+  padding: 4em .95em 1em .95em;
   // padding-top: 4em;
   margin-top: 1em;
   // padding-left: .95em;/
