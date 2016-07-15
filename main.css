@@ -78,7 +78,7 @@ nav {
   .nav-toggle div {
     width: 20px;
     height: 2px;
-    background: #2770e4;
+    background: red;
     cursor: pointer;
     margin: 4px auto; }
     .nav-toggle div:first-child {
