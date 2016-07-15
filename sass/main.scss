@@ -72,7 +72,7 @@ article {
 }
 
 section {
-  margin-top: 2em;
+  margin-bottom: 2em;
   border-top: 2em solid #eee;
 }
 
@@ -119,8 +119,8 @@ blockquote {
 :target:before {
   content:"";
   display:block;
-  height:4em; /* fixed header height*/
-  margin:-4em 0 0; /* negative fixed header height */
+  height:5em; /* fixed header height*/
+  margin:-5em 0 0; /* negative fixed header height */
 }
 
 h2 {

@@ -36,13 +36,20 @@ ready(function(){
     navToggle.addEventListener(e, function(event){
       var isOpen = this.classList.contains('nav-toggle--open');
       if(!isOpen){
-        this.classList.add('nav-toggle--open');
+        navToggle.classList.add('nav-toggle--open');
         navTOC.classList.add('nav-toc--open');
       } else {
-        this.classList.remove('nav-toggle--open');
+        navToggle.classList.remove('nav-toggle--open');
         navTOC.classList.remove('nav-toc--open');
       }
       console.log('is open', isOpen);
+    });
+  });
+
+  ['click', 'tap'].forEach(function(e){
+    navTOC.addEventListener(e, function(event){
+      navToggle.classList.remove('nav-toggle--open');
+      navTOC.classList.remove('nav-toc--open');
     });
   });
 
