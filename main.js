@@ -67,7 +67,7 @@ ready(function(){
   var navToggle = document.querySelectorAll('.js-nav-toggle')[0];
   var navTOC = document.querySelectorAll('.js-nav-toc')[0];
 
-  ['click', 'tap'].forEach(function(e){
+  ['click'].forEach(function(e){
     navToggle.addEventListener(e, function(event){
       var isOpen = this.classList.contains('nav-toggle--open');
       if(!isOpen){
@@ -81,7 +81,7 @@ ready(function(){
     });
   });
 
-  ['click', 'tap'].forEach(function(e){
+  ['click'].forEach(function(e){
     navTOC.addEventListener(e, function(event){
       navToggle.classList.remove('nav-toggle--open');
       navTOC.classList.remove('nav-toc--open');
