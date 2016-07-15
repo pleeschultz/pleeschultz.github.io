@@ -18,7 +18,7 @@ ready(function(){
   var h3s = document.querySelectorAll('h3');
   var navLinks = document.querySelectorAll('.nav-toc a');
 
-  [].forEach.caall(navLinks, function(element, index, array){
+  [].forEach.call(navLinks, function(element, index, array){
     var href = element.getAttribute('href').slice(1);
     element.dataHref = href;
   });
