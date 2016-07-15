@@ -68,7 +68,8 @@ nav {
   max-height: 100%;
   top: 0;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; }
 
 .nav-toggle {
   display: block;
@@ -76,7 +77,7 @@ nav {
   .nav-toggle div {
     width: 20px;
     height: 2px;
-    background-color: rgba(0, 0, 0, 0.49);
+    background: #2770e4;
     margin: 4px auto; }
     .nav-toggle div:first-child {
       margin-top: 1em; }
@@ -109,7 +110,8 @@ nav {
 
 article {
   width: 100%;
-  padding: 0 0 0 0em; }
+  padding: 0 0 0 0em;
+  -webkit-overflow-scrolling: touch; }
 
 .article-inner {
   max-width: 768px;
